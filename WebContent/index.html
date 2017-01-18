@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Dynamic form</title>
+</head>
+<body ng-app="myapp">
+
+	<div ng-controller="myctrl">
+		<form ng-submit="save()">
+		
+			<button type="button" ng-click="add()">+</button>
+			
+			<div ng-repeat="tagfield in tagfields">
+				<input type="text" id="{{tagfield.getid}}" name="{{tagfield.getid}}" ng-model="temporary[tagfield.getid]" />
+				<select id="{{tagfield.getselid}}" name="{{tagfield.getselid}}" ng-model="temporary[tagfield.getselid]">
+					<option value="text" selected="selected">Text</option>
+					<option value="dropdown">Dropdown</option>
+				</select>
+				<button type="button" ng-click="rem()">-</button>
+			</div>
+			<button type="reset">Reset</button>
+			<button type="submit">Submit</button>
+		</form>
+	</div>
+
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
+<script type="text/javascript" src="backscript.js"></script>
+</body>
+</html>
