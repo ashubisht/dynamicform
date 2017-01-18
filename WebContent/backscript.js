@@ -47,7 +47,7 @@ app.controller("myctrl", function($scope){
 	
 	$scope.save = function(){
 		console.log($scope.temporary);
-		//Task 2: Need to convert this temporary into array of objects which can be send to persistence
+		//Task 2: Need to convert this temporary object into array of objects with common keys which can be send to persistence
 	}
 	
 })
