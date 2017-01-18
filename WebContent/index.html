@@ -6,7 +6,7 @@
 </head>
 <body ng-app="myapp">
 
-	<div ng-controller="myctrl">
+	<div ng-controller="myctrl" ng-init="initspaces()">
 		<form ng-submit="save()">
 		
 			<button type="button" ng-click="add()">+</button>
